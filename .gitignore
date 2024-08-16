@@ -1,26 +1,13 @@
-### IntelliJ IDEA ###
+# Ignore IntelliJ IDEA project-specific files
+.idea/
+.idea/*
+.idea/**/*
 
+# Ignore SonarLint specific files
+.idea/sonarlint/
+.idea/sonarlint/*
+.idea/sonarlint/**/*
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-### VS Code ###
+# Ignore other potentially unwanted IDE files
+*.iml
 .vscode/
-
-### Mac OS ###
-.DS_Store
