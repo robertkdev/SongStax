@@ -11,5 +11,6 @@ public class MusicController {
     public String home(Model model) {
         model.addAttribute("message", "Welcome to the Music Player!");
         return "home";
+
     }
 }

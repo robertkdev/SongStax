@@ -16,5 +16,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().permitAll()  // Allow all requests without authentication
                 .and()
                 .csrf().disable();  // Disable CSRF for simplicity
+
     }
 }
