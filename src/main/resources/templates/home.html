@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Music Player</title>
+    <title>SongStaxx Home</title>
 </head>
 <body>
-<h1 th:text="${message}">Welcome to the Music Player!</h1>
-<p>Upload your music files and manage your playlists.</p>
+<h1>Welcome to SongStaxx</h1>
+<h2>Your Songs</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Artist</th>
+        <th>Album</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="song : ${songs}">
+        <td th:text="${song.title}">Song Title</td>
+        <td th:text="${song.artist}">Artist Name</td>
+        <td th:text="${song.album}">Album Name</td>
+        <td>
+            <a th:href="@{/version-history(songId=${song.id})}">View Versions</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<a th:href="@{/upload}">Upload New Song Version</a>
 </body>
 </html>
