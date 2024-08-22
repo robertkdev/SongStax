@@ -1,0 +1,15 @@
+<!-- upload.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Upload Music</title>
+</head>
+<body>
+<h1>Upload Your Music</h1>
+<form action="#" th:action="@{/upload}" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" />
+    <button type="submit">Upload</button>
+</form>
+<p th:text="${message}"></p>
+</body>
+</html>
